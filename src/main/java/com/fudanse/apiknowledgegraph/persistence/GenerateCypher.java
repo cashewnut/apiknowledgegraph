@@ -16,7 +16,7 @@ public class GenerateCypher {
 
 	public static String saveEdge(Vertex left, Vertex right, Edge edge) {
 		return "Start a=node(" + left.getId() + "),b=node(" + right.getId() + ") create (a)-[r:" + edge.getLabel()
-				+ "{name:" + edge.getName() + "}]->(b)";
+				+ "{name:'" + edge.getName() + "'}]->(b)";
 	}
 
 }

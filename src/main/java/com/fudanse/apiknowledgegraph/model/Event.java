@@ -2,12 +2,19 @@ package com.fudanse.apiknowledgegraph.model;
 
 import com.fudanse.apiknowledgegraph.enums.EnumVertexLabel;
 
-public class Listener {
+public class Event {
 
 	private Integer id;
 	private String name;
 	private String description;
-	private String belongto;
+
+	public Event() {
+	}
+
+	public Event(String name, String description) {
+		this.name = name;
+		this.description = description;
+	}
 
 	public Integer getId() {
 		return id;
@@ -33,19 +40,11 @@ public class Listener {
 		this.description = description;
 	}
 
-	public String getBelongto() {
-		return belongto;
-	}
-
-	public void setBelongto(String belongto) {
-		this.belongto = belongto;
-	}
-
 	public Vertex convert() {
 		Vertex v = new Vertex();
-		v.setLabel(EnumVertexLabel.LISTENER.getValue());
-		v.setDescription(description);
 		v.setName(name);
+		v.setDescription(description);
+		v.setLabel(EnumVertexLabel.EVENT.getValue());
 		return v;
 	}
 
