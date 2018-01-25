@@ -116,7 +116,7 @@ public class GenerateGraph {
 	}
 
 	public void generate() {
-		String basePath = "/home/fdse/xiyaoguo/java/knowledges/";
+		String basePath = "/home/fdse/xiyaoguo/javacode/knowledges/";
 		List<View> views = ParseFile.generateView(basePath + "View.csv");
 		Map<String, Integer> viewMap = saveView(views);
 		List<Listener> lis = ParseFile.getCommonListener(basePath + "Listener1.csv");
