@@ -60,4 +60,10 @@ public class Vertex implements Serializable {
 		this.simpleDescription = simpleDescription;
 	}
 
+	@Override
+	public String toString() {
+		return "Vertex [id=" + id + ", label=" + label + ", name=" + name + ", description=" + description
+				+ ", simpleDescription=" + simpleDescription + "]";
+	}
+
 }

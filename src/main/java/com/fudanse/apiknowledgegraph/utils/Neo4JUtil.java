@@ -12,7 +12,7 @@ import org.neo4j.driver.v1.TransactionWork;
 
 public class Neo4JUtil {
 
-	private final static String uri = "bolt://localhost:7687";
+	private final static String uri = "bolt://10.141.221.72:7687";
 	private final static String username = "neo4j";
 	private final static String password = "fdse";
 
@@ -65,7 +65,6 @@ public class Neo4JUtil {
 				StatementResult result = tx.run(
 						"CREATE(n:aaa:$b3{name:$name,ff:$ff}) SET n:bbb RETURN id(n)",
 						parameters("b3","bab","name", "n","ff","ss"));
-				
 				return result.single().get(0).asInt();
 			}
 		});

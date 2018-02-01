@@ -30,4 +30,9 @@ public class EntryMethod {
 		return v;
 	}
 
+	@Override
+	public String toString() {
+		return "EntryMethod [id=" + id + ", name=" + name + "]";
+	}
+
 }
